@@ -272,7 +272,7 @@ The application is responsive and works on:
 ## Support & Maintenance
 
 For issues or feature requests, please contact:
-- Email: support@christuniversity.edu
+- Email: saksham.sharma@btech.christuniversity.in
 - Department: AI, ML & Data Science
 
 ## Version History
