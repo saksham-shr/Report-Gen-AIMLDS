@@ -297,14 +297,4 @@ def generate_report_pdf(data):
     pdf = buffer.getvalue()
     buffer.close()
 
-    # construct filename like Workshop_Title_Date.pdf
-    title_words = (
-        general_info.get("Title of the Activity", "Activity")
-        .replace(":", "")
-        .replace("/", "")
-        .replace(" ", "")
-    )
-    date_field = general_info.get("Date/s", "").replace(" ", "").replace("–", "_")
-    filename = f"Workshop_{title_words}_{date_field}.pdf"
-
-    return pdf, filename
+    return pdf

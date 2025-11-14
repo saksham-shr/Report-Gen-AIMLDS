@@ -183,9 +183,11 @@ def index():
                 return render_template('index.html', error=error_msg)
 
             # Generate PDF
-            pdf_bytes, filename = generate_report_pdf(data)
+            pdf_bytes = generate_report_pdf(data)
 
-        
+            activity_title = data['general_info'].get('Activity Type', 'Activity')
+            filename = f"{activity_title}_Report_{int(time.time())}.pdf"
+
             return send_file(
                 BytesIO(pdf_bytes),
                 mimetype='application/pdf',
